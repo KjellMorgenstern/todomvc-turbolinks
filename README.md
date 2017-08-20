@@ -1,5 +1,3 @@
-## TodoMVC with Turbolinks 3
+## TodoMVC with Turbolinks 5
 
-An implementation of TodoMVC using Rails 5 and Turbolinks 3
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+An implementation of TodoMVC using Rails 5 and Turbolinks 5
