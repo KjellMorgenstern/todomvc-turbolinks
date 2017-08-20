@@ -1,21 +1,24 @@
 source 'https://rubygems.org'
 
-gem 'rails', github: "rails/rails"
+gem 'rails'
 
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
+
 gem 'coffee-rails'
-gem "jquery-rails"
-gem 'turbolinks', github: 'rails/turbolinks'
+gem 'jquery-rails'
+gem 'turbolinks', '~> 5.0.0'
+
 gem 'puma'
 
 group :development, :test do
+  gem 'flamegraph'
+  gem 'listen'
+  gem 'pry'
+  gem 'rack-mini-profiler'
   gem 'spring'
   gem 'stackprof'
-  gem 'rack-mini-profiler'
-  gem 'flamegraph'
-  gem 'pry'
 end
 
 group :test do
