@@ -1,5 +1,5 @@
 <section id="todoapp">
-  <header id="header" data-turbolinks-permanent>
+  <header id="header">
     <h1>todos</h1>
     <%= form_for Todo.new, remote: true, authenticity_token: true do |f| %>
       <%= f.text_field :title, id: "new-todo", placeholder: "What needs to be done?", autofocus: true, autocomplete: "off" %>
@@ -7,7 +7,7 @@
   </header>
   <% @todos.load %>
   <section id="main">
-    <%= form_tag update_many_todos_path, method: :put, remote: true, "data-turbolinks-temporary" => true, id: "update_many_todos", authenticity_token: true do %>
+    <%= form_tag update_many_todos_path, method: :put, remote: true, id: "update_many_todos", authenticity_token: true do %>
       <% @todos.map do |todo| %>
         <%= hidden_field_tag "ids[]", todo.id %>
       <% end %>
@@ -35,7 +35,7 @@
       <% end %>
     </ul>
   </section>
-  <footer id="footer" data-turbolinks-temporary class="<%= "hidden" unless @todos.any? || filtering_params.any? %>">
+  <footer id="footer" class="<%= "hidden" unless @todos.any? || filtering_params.any? %>">
     <span id="todo-count">
       <%= pluralize @todos.reject(&:is_completed).size, "item" %> left
     </span>
