@@ -1,1 +1,1 @@
-Turbolinks.visit("<%= j(url_for(Todo)) %>")
+Turbolinks.visit("<%= escape_javascript(todos_url) %>")
