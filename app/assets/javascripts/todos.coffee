@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-document.addEventListener("turbolinks:load", -> 
+$(->
 
   $(document).on "click", "[data-behavior~=submit_on_check]", ->
     $(@).closest("form").submit()
@@ -27,8 +27,5 @@ document.addEventListener("turbolinks:load", ->
     if $(@).find("#todo_title").val() == ""
       event.preventDefault()
       $(@).parent().find(".destroy_todo").submit();
-
-  $(document).on "ajax:complete", "#new_todo", (event, xhr, status) ->
-    $('#new-todo').val('')
 
 )
