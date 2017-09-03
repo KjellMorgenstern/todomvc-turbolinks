@@ -15,6 +15,7 @@
  *= require todomvc
  */
 
-html.turbolinks-progress-bar::before {
-  display: none !important;
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: rgba(175, 47, 47, 0.15);
 }
